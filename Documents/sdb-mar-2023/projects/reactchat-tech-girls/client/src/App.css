@@ -1,0 +1,157 @@
+.App {
+  background-image:  linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.login-form, .signup-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 10px 40px -10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form-container{
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #cbcce0;
+  box-shadow: 0px 10px 40px -10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+.input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.button {
+  margin: 0.5rem 0;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #2e66b9;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}
+
+#classicformpage .view {
+  background-image: url("http://mdbootstrap.com/img/Photos/Others/images/91.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+#classicformpage .gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(72, 15, 144, 0.4) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    45deg,
+    from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%)
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(72, 15, 144, 0.4) 100%
+  );
+}
+
+#classicformpage .card {
+  background-color: rgba(126, 123, 215, 0.2);
+}
+
+#classicformpage h6 {
+  line-height: 1.7;
+}
+
+#classicformpage .navbar {
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+#classicformpage .top-nav-collapse {
+  background: #424f95 !important;
+}
+
+@media (max-width: 768px) {
+  #classicformpage .navbar:not(.top-nav-collapse) {
+    background: #424f95 !important;
+  }
+}
+
+#classicformpage label {
+  color: #fff !important;
+}
+
+
+
