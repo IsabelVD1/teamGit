@@ -1,8 +1,8 @@
 import React,{ useState, useEffect} from "react";
 import { Col, Container, Row } from "reactstrap";
-import RoomCreate from "./RoomCreate";
+//import RoomCreate from "./RoomCreate";
 import RoomTable from "./RoomTable";
-
+import InputRoom from "./Input";
 
 
 const RoomIndex = (props) => {
@@ -41,13 +41,16 @@ const RoomIndex = (props) => {
         <>
             <Container>
                 <Row>
-                    {<Col md="4">
+                    {/* <Col md="4">
                         <RoomCreate token={props.token} getViewAllRooms={getViewAllRooms} />
-                    </Col> }
+                    </Col> */}
                     <Col md="8">
                         <RoomTable rooms={rooms} token={props.token} getViewAllRooms={getViewAllRooms} />
                     </Col>
 
+                    <Col md="4">
+                        <InputRoom token={props.token} getViewAllRooms={getViewAllRooms} />
+                    </Col>
                 </Row>
             </Container>
         </>

@@ -1,16 +1,19 @@
-import{ Table } from "reactstrap";
+import{ Container, Table } from "reactstrap";
 import RoomTableRow from "./RoomTableRow";
 
 const RoomTable = (props) => {
     return (
         <>
-          <h1>Room's</h1>
+         
+        <Container className="App">
+           
+        <h1>Room's</h1>
+     
           <Table>
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Added Users</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +22,7 @@ const RoomTable = (props) => {
                     ))}
                 </tbody>
                 </Table>
+                </Container>
         </>
     );
 

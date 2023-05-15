@@ -2,7 +2,7 @@ import { Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
 const RoomTableRow = (props) => {
-    const{name, description, addedUsers, _id} = props.room;
+    const{name, description, _id} = props.room;
 
    // let formattedDate = date.split("T")[0];
 
@@ -38,8 +38,9 @@ const RoomTableRow = (props) => {
                 <td>{name}</td>
                 <td>{description}</td>
               
-                <td><Button color="warning" onClick={() => navigate(`/update/${_id}`)}>Update</Button></td>
-                <td><Button color="danger" onClick={handleDelete}>Delete</Button></td>
+              
+                <td><Button color="warning" onClick={() => navigate(`/room/${_id}`)}>Join</Button></td>
+                {/* <td><Button color="danger" onClick={handleDelete}>Delete</Button></td> */}
           </tr>
         </>
     );

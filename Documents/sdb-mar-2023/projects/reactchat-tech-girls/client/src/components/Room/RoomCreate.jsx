@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 const RoomCreate = (props) => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
-    const [addedUsers, setAddedUsers] = useState("");
+    //const [addedUsers, setAddedUsers] = useState("");
 
     //Function here
     async function handleSubmit(e) {
@@ -14,7 +14,7 @@ const RoomCreate = (props) => {
             let bodyObject = {
                 name: name,
                 description: description,
-                addedUsers: addedUsers,
+                //addedUsers: addedUsers,
             };
 
             let myHeaders = new Headers();

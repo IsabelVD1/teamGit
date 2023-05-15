@@ -1,6 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label, Container, Row, Col} from "reactstrap";
+import InputRoom from './Input';
+import MessageEdit from '../Message/MessageEdit';
+import MessageIndex from '../Message/MessageIndex';
+
 
 
 const RoomEdit = (props) => {
@@ -23,7 +27,7 @@ const RoomEdit = (props) => {
     async function handleSubmit(e) {
         e.preventDefault();
         console.log(id);
-        let url = `http://localhost:4000/room/update/`+id;
+        let url = `http://localhost:4000/room/`+id;
         let bodyObject = {
             name,
             roomDescription,
@@ -75,19 +79,22 @@ const RoomEdit = (props) => {
         }
     }
 
+    useEffect(() => {
+        if (props.token) {
+            getRoomById();
+        }
+    }, [props.token]);
+
     return (
         <>
            <Container>
 
         <Row>
-            <Col md="4">
-                <h4>Instructions</h4>
-                <p>
-                    Correct any error you may find in your room and click the "Update Room" button.    
-                </p>
-            </Col>
-            <Col md="8">
             
+            <Col md="8">
+                
+              <h2>Welcome to {name}!</h2>
+              <p>{roomDescription}</p>{roomDescription}
                 <Form className='mb-5' onSubmit={handleSubmit}>
                     <FormGroup>
                         <Label>Name:</Label>
@@ -100,7 +107,16 @@ const RoomEdit = (props) => {
                     <Button type="submit">Update Room</Button>
                 </Form>
             </Col>
+            <Col md="4">
+              <MessageEdit token={props.token}  name= {name} />
+            </Col>
+            <Col md="4">
+              < MessageIndex token={props.token} name= {name} />
+            </Col>
             </Row>
+            <div>
+                <InputRoom token={props.token} />
+            </div>
             </Container>
         </>
     );

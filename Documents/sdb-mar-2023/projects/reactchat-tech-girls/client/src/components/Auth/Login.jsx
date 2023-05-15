@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 
+
 const Login = (props) => {
     // UserState Variables 
     const [email, setEmail]= useState("");
@@ -33,7 +34,7 @@ const Login = (props) => {
                 console.log(data);
                 if(data.message === "password matched") {
                 props.updateToken(data.token);
-                navigate("/driver-log");
+                navigate("/room");
 
             }
             }
@@ -56,13 +57,17 @@ const Login = (props) => {
                      {/* End of Email */}
                      {/* Star of Password */}
                     <FormGroup>
-                        <Label>Password:</Label>
-                        <Input value={password} onChange={(e)=> setPassword(e.target.value) } />
+                        <Label for="password">Password:</Label>
+                        <Input type="password" value={password} onChange={(e)=> setPassword(e.target.value) } />
                        {/* End of Password */} 
                     </FormGroup>
                     <div className="text-center d-grid gap-2 mb-4">
                      <Button type="submit" color="primary">Login</Button>
                      </div>
+                    <div className="d-flex flexrow aling-items-center justify-content-center pb-4 mb-4">
+                        <p className="mb-0 aling-item-center">Don't have an account?</p>
+                        <Button onClick={()=>props.setCurrentForm("signup")} outline className='mx-2' color='danger'>Sing Up</Button>
+                        </div>  
             </Form>
             </div>
             </>
